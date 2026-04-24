@@ -11,3 +11,16 @@ body{
 p{
     margin: 5px 0;;
 }
+.container {
+    display: flex;
+    gap:20px;
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+.card{
+    border:  1px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+}

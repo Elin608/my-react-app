@@ -1,14 +1,38 @@
-import profilePic from "../palm.jpeg";
-function Profile(){
+import "./profile.css"
+function Profile({
+  name,
+  screenshot,
+  github,
+  tech,
+  writeUp,
+  whatItDoes,
+  learned,
+  role,
+  challenges
+  }) {
  return(
-    <>
-    <h1>AudioNest</h1>
-    <p><strong>Tech</strong> HTML, CSS, JavaScript </p>
-    <p><strong>Description</strong> A headphone website</p>
-    <p><strong>What it does</strong> Shows products and informations</p>
-    <img src={profilePic} alt="project image" />
-    </>
+    <div className="card">
+      <h2>{name}</h2>
+
+      <img src ={screenshot} 
+      alt={name}/>
+
+      <p><strong> Github:</strong>
+      {github}</p>
+
+      <p><strong>Tech used:</strong> {tech}</p>
+
+      <p><strong>Description:</strong>{writeUp}</p>
+      <p><strong>What it does:</strong>{whatItDoes}</p>
+      <p><strong>What you learned:</strong>{learned}</p>
+      <p><strong>Your role:</strong> {role}</p>
+      <p><strong>Challenges:</strong> {challenges}</p>
+
+        
+      
+    </div>
+    
   )
   }
 
-export default Profile
+export default Profile;
