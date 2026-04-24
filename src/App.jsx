@@ -1,47 +1,28 @@
+import Portfolio from "./assets/Portfolio";
+import Navbar from "./assets/components/Navbar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home"
+import About from "./pages/About"
 
-import Profile from "./assets/components/profile";
-import palm from "./assets/palm.jpeg"
-function App() {
+function App(){
     return (
-        <div className="container">
-            <Profile
-            name ="AudioNest"
-            screenshot={palm}
-            github="https://github.com/Elin608/group-project--headphones.git"
-            tech ="HTML, Css & JavaScript"
-            Description= "A headphone website"
-            whatItDoes= "Shows information and products"
-            lerned="Learned React basics"
-            role="Frontend developer"
-            challenges="Understanding props"
-            />
+        <BrowserRouter>
+        <Navbar/>
+        <Routes>
+        <Route path="/"
+        element={<Home/>}/>
+        <Route path="/about"
+        element={<About/>}/>
+        <Route path="/portfolio"
+        element={<Portfolio/>}/>
+        </Routes>
+        </BrowserRouter>
 
-            <Profile
-            name="Vanlife"
-            screenshot={palm}
-            github="https://github.com/Elin608/Bootstrap.git "
-            tech="React"
-            Description="A vanlife website"
-            whatItDoes="Shows travel content"
-            lerned="Learned components"
-            role="Designer and developer"
-            challenges="Styling"
-            />
-            
-            <Profile
-            name="Portfolio"
-            screenshot={palm}
-            tech="HTML & CSS"
-            Description="My personal portfolio"
-            whatItDoes="Shows my project"
-            lerned=""
-            role="Frontend developer"
-            challenges=""
-            />
-            
-        </div>
+        
+        
     );
     }
+
  
 
 export default App
