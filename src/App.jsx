@@ -7,6 +7,7 @@ function App() {
             <Profile
             name ="AudioNest"
             screenshot={palm}
+            github="https://github.com/Elin608/group-project--headphones.git"
             tech ="HTML, Css & JavaScript"
             Description= "A headphone website"
             whatItDoes= "Shows information and products"
@@ -18,6 +19,7 @@ function App() {
             <Profile
             name="Vanlife"
             screenshot={palm}
+            github="https://github.com/Elin608/Bootstrap.git "
             tech="React"
             Description="A vanlife website"
             whatItDoes="Shows travel content"

@@ -18,7 +18,8 @@ function Profile({
       alt={name}/>
 
       <p><strong> Github:</strong>
-      {github}</p>
+      <a href={github}
+      target="_blank">View repo</a></p>
 
       <p><strong>Tech used:</strong> {tech}</p>
 
