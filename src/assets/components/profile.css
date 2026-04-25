@@ -29,3 +29,8 @@ p{
 .card:hover {
     transform: translateY(-5px);
 }
+.projects {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}

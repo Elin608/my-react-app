@@ -1,4 +1,4 @@
-import Portfolio from "./assets/Portfolio";
+import Portfolio from "./pages/Portfolio";
 import Navbar from "./assets/components/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home"
