@@ -9,7 +9,7 @@ function Portfolio(){
     return (
         <div>
             <button onClick={()=>
-            setshowProjects(true)}>
+            setshowProjects(!showProjects)}>
                 Preview projects
                 </button> 
                 
