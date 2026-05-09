@@ -1,6 +1,7 @@
 import Profile from "../assets/components/profile";
 import palm from "../assets/palm.jpeg";
 import { useState } from "react";
+import Popup from "./Popup.jsx";
 
 function Portfolio() {
     const [showProjects,
@@ -9,8 +10,13 @@ function Portfolio() {
     const [search, setSearch] =
         useState("");
 
+    const [selectedProject, setSelectedProject] =
+        useState(null);
+
 
     const projects = [
+
+
         {
             name: "AudioNest",
             screenshot: palm,
@@ -60,39 +66,61 @@ function Portfolio() {
                 onChange={(e) =>
                     setSearch(e.target.value)}
             />
+
             <button onClick={() =>
                 setShowProjects(!showProjects)}>
-                {showProjects ? "Hide projects" : "Preview projects "}
-
+                {showProjects ? "Hide projects" :
+                    " Preview projects"}
             </button>
 
             <div className="projects-container">
                 {showProjects &&
+                    projects
+                        .filter((project) =>
 
-
-                    projects.
-                        filter((project) =>
                             project.name.toLowerCase().includes(search.toLowerCase())
                         )
                         .map((project, index) => (
-                            <Profile
+
+                            <div
                                 key={index}
-                                name={project.name}
-                                screenshot={project.screenshot}
-                                github={project.github}
-                                tech={project.tech}
-                                writeUp={project.writeUp}
-                                whatItDoes={project.whatItDoes}
-                                learned={project.learned}
-                                role={project.role}
-                                challenges={project.challenges}
-                            />
+                                onClick={() =>
+                                    setSelectedProject(project)}
+                            >
+                                <Profile
+                                    name={project.name}
+                                    screenshot={project.screenshot}
+                                    github={project.github}
+                                    tech={project.tech}
+                                    writeUp={project.writeUp}
+                                    whatItDoes={projects.whatItDoes}
+                                    learned={project.learned}
+                                    role={project.role}
+                                    challenges={project.challenges}
+                                />
+
+
+                            </div>
+
                         ))
                 }
             </div>
+
+
+
+            {selectedProject && (
+                <Popup
+                    project={selectedProject}
+                    onClose={() =>
+                        setSelectedProject(null)}
+                />
+            )}
         </div>
+
+
     );
 }
+
 
 export default Portfolio;
 
