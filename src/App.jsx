@@ -4,25 +4,25 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home"
 import About from "./pages/About"
 
-function App(){
+function App() {
     return (
         <BrowserRouter>
-        <Navbar/>
-        <Routes>
-        <Route path="/"
-        element={<Home/>}/>
-        <Route path="/about"
-        element={<About/>}/>
-        <Route path="/portfolio"
-        element={<Portfolio/>}/>
-        </Routes>
+            <Navbar />
+            <Routes>
+                <Route path="/"
+                    element={<Home />} />
+                <Route path="/about"
+                    element={<About />} />
+                <Route path="/portfolio"
+                    element={<Portfolio />} />
+            </Routes>
         </BrowserRouter>
 
-        
-        
-    );
-    }
 
- 
+
+    );
+}
+
+
 
 export default App
